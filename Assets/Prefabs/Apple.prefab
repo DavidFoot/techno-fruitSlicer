@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 575087285137127148}
   - component: {fileID: 6009104983508272014}
   - component: {fileID: 5177138424063617974}
+  - component: {fileID: 6947660546660269623}
   m_Layer: 0
   m_Name: Apple_LP
   m_TagString: Untagged
@@ -84,6 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &6947660546660269623
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225103271112056074}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04774842
+  m_Height: 0.08500027
+  m_Direction: 1
+  m_Center: {x: 0.00016973352, y: 0.04262163, z: -0.00016795284}
 --- !u!1001 &8740817208429618276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,6 +160,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3040336620862433256, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
+      propertyPath: m_fruits
+      value: 
+      objectReference: {fileID: 8368565898173063578}
+    - target: {fileID: 3040336620862433256, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
+      propertyPath: m_placeHolderMaterial
+      value: 
+      objectReference: {fileID: -1580535799172915004, guid: 275adcf798c421e49bf284f4405ce712, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2357703287579868731, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
@@ -148,5 +180,10 @@ PrefabInstance:
 --- !u!4 &7345479857963846320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2071090627900698324, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
+  m_PrefabInstance: {fileID: 8740817208429618276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8368565898173063578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 967852429965788670, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
   m_PrefabInstance: {fileID: 8740817208429618276}
   m_PrefabAsset: {fileID: 0}

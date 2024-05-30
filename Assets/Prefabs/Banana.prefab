@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3584459623663849449}
   - component: {fileID: 3612234105713171695}
   - component: {fileID: 1843809205027163119}
+  - component: {fileID: 1348086693468544058}
   m_Layer: 0
   m_Name: Banana_LP
   m_TagString: Untagged
@@ -85,6 +86,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1348086693468544058
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525856448979292935}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09849971
+  m_Height: 0.19699942
+  m_Direction: 1
+  m_Center: {x: 0.01855399, y: 0.02665978, z: 0.028758595}
 --- !u!1001 &4645929535793739336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,7 +119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967852429965788670, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
       propertyPath: m_Name
-      value: Fruits Variant
+      value: Banana
       objectReference: {fileID: 0}
     - target: {fileID: 2071090627900698324, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
       propertyPath: m_LocalPosition.x

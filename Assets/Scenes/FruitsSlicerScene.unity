@@ -370,17 +370,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fruitsSpawningDelay: 1
   m_fruitsSpawningObjects:
-  - {fileID: 8368565898173063578, guid: cf9c5768eda062640b70585017920ac5, type: 3}
-  - {fileID: 5554953625293763510, guid: f9e0fd976033b9b46a578d1c8db2f002, type: 3}
-  - {fileID: 8387082364793411259, guid: 5afa23da293a372488b81e03bb9a94dd, type: 3}
-  - {fileID: 3535216728961916614, guid: 2d4bf1299741a87489379b2d89ccfeb0, type: 3}
-  - {fileID: 5343361339586397942, guid: 4a97094212128504599b9210d5a6d9d5, type: 3}
+  - {fileID: 8466031009526395029, guid: be6f2daa9410f1341bbef1a6a9a55818, type: 3}
   m_fruitsSpawningPositions:
   - {fileID: 646675382}
   - {fileID: 1300339500}
   - {fileID: 1333586836}
   - {fileID: 1801922655}
-  m_force: 33
+  m_force: 15
   m_fruitContainer: {fileID: 1551159182}
 --- !u!4 &1102731087
 Transform:
@@ -573,6 +569,10 @@ PrefabInstance:
     - target: {fileID: 4209395780466878797, guid: 4fdf5e874872bd64583cb1564618d5b2, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 1.0680755
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535820418354009964, guid: 4fdf5e874872bd64583cb1564618d5b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7752125425171387173, guid: 4fdf5e874872bd64583cb1564618d5b2, type: 3}
       propertyPath: m_LocalPosition.x

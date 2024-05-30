@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SlashDetector : MonoBehaviour
 {
     private Vector3 m_moveDirection;
     private float m_speed;
+    private Vector3 m_normal;
 
     // Start is called before the first frame update
 
@@ -24,7 +26,7 @@ public class SlashDetector : MonoBehaviour
             Vector3 rawDirec = currentPosition - lastposition;
             m_moveDirection = Vector3.Normalize(rawDirec);
             m_speed = rawDirec.magnitude;
-
+            m_normal = Vector3.Cross(Vector3.back, m_moveDirection);
         }
     }
 
@@ -36,6 +38,8 @@ public class SlashDetector : MonoBehaviour
     }
     private void OnTriggerEnter(Collider _fruit)
     {
-        Debug.Log("La souris me chatouille");
+        var gameObjectToBeSlice = _fruit.gameObject;
+        Debug.Log(gameObjectToBeSlice.name);
+        gameObjectToBeSlice.GetComponent<FruitsController>().Slice(transform.position,m_normal);
     }
 }

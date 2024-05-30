@@ -55,13 +55,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5212125591609093581, guid: d972dd5a3ae8cb143ac578025f46bf3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7205889784896404184}
   m_SourcePrefab: {fileID: 100100000, guid: d972dd5a3ae8cb143ac578025f46bf3a, type: 3}
 --- !u!4 &162003691537206246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4836549550198323063, guid: d972dd5a3ae8cb143ac578025f46bf3a, type: 3}
   m_PrefabInstance: {fileID: 4693152473039633553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &681272606016459100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5212125591609093581, guid: d972dd5a3ae8cb143ac578025f46bf3a, type: 3}
+  m_PrefabInstance: {fileID: 4693152473039633553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &7205889784896404184
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681272606016459100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.080095656
+  m_Height: 0.32141763
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.1607117, z: 0}
 --- !u!1001 &5136899065321505544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 967852429965788670, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
       propertyPath: m_Name
-      value: Fruits Variant
+      value: Pineapple
       objectReference: {fileID: 0}
     - target: {fileID: 2071090627900698324, guid: 65713a582d1d12742aa01aa8f1dfc458, type: 3}
       propertyPath: m_LocalPosition.x

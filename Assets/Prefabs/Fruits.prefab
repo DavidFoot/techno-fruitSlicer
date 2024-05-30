@@ -73,3 +73,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_spawnerFruit: {fileID: 0}
+  m_placeHolderMaterial: {fileID: -1580535799172915004, guid: 275adcf798c421e49bf284f4405ce712, type: 3}
+  m_fruits: {fileID: 8368565898173063578, guid: cf9c5768eda062640b70585017920ac5, type: 3}
