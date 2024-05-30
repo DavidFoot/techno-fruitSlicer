@@ -4,6 +4,7 @@ using UnityEngine;
 public class FruitsController : MonoBehaviour
 {
     [SerializeField] public Transform m_spawnerFruit;
+    [SerializeField] public Transform m_container;
     [SerializeField] public Material m_placeHolderMaterial;
     [SerializeField] public GameObject m_fruits;
     private Transform m_fruitPosition;
@@ -11,6 +12,7 @@ public class FruitsController : MonoBehaviour
     void Start()
     {
         m_fruitPosition = GetComponent<Transform>();
+        m_container = transform.parent.GetComponent<Transform>();
     }
 
     public void Slice(Vector3 _position, Vector3 _normal)
@@ -23,14 +25,20 @@ public class FruitsController : MonoBehaviour
         var lowerCollider = lowerHull.AddComponent<MeshCollider>();
         var upCollider = upperHull.AddComponent<MeshCollider>();
 
+
         lowerCollider.enabled = true;
         lowerCollider.convex = true; 
+        lowerCollider.isTrigger = true;
         
         upCollider.enabled = true;
         upCollider.convex = true;
+        upCollider.isTrigger = true;
 
         var rbl = lowerHull.AddComponent<Rigidbody>();
         var rbu = upperHull.AddComponent<Rigidbody>();
+
+        rbl.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionZ;
+        rbu.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionZ;
 
         rbl.AddExplosionForce(300, rbl.position, 5, 0f);
         rbu.AddExplosionForce(300, rbl.position, 5, 0f);
@@ -41,8 +49,16 @@ public class FruitsController : MonoBehaviour
         var fruitLower = lowerHull.AddComponent<FruitsController>();
         var fruitUpper = upperHull.AddComponent<FruitsController>();
 
+        //Utile pour le Destroy
         fruitLower.m_spawnerFruit = m_spawnerFruit;
         fruitUpper.m_spawnerFruit = m_spawnerFruit;
+
+        upperHull.transform.parent = m_container;
+        lowerHull.transform.parent = m_container;
+
+
+        upperHull.transform.position = transform.position;
+        lowerHull.transform.position = transform.position;
 
         fruitLower.m_placeHolderMaterial = m_placeHolderMaterial;
         fruitUpper.m_placeHolderMaterial = m_placeHolderMaterial;

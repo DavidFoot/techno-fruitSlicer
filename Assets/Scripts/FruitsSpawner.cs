@@ -8,7 +8,7 @@ public class FruitsSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> m_fruitsSpawningObjects;
     [SerializeField] private List<Transform> m_fruitsSpawningPositions;
     [SerializeField] private float m_force;
-    [SerializeField] Transform m_fruitContainer;
+    [SerializeField] public Transform m_fruitContainer;
     // Start is called before the first frame update
     IEnumerator Start()
     {
